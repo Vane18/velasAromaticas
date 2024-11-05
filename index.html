@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velas Aromáticas - Emprendimiento</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://elcomercio.pe/resizer/v2/WLVHFNPVJFGMHCR457MZ3YIDQM.jpg?auth=e72fcfff89bfd5b47696a1393c685c94728c6f7d296d10a0d8681e6f138c57ca&width=1200&height=810&quality=90&smart=true");
+            background-size: cover;
+            text-align: center;
+            
+        }
+
+
+        nav {
+            margin: 0;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #8c7ae6; 
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+ 
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f7d794; 
+        }
+
+      
+        .content {
+            padding-top: 60px;
+        }
+
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5em;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+       
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; 
+            }
+
+            body {
+                background-size: cover;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #8c7ae6;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#acerca">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Bienvenidos a Velas Aromáticas</h1>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
